@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indicado.css">
+    
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/formulario-d2bcb.appspot.com/o/icon.ico?alt=media&token=0d8a61ca-d40d-4b6d-be8a-9cedcac498a7" type="image/x-icon">
+    
+    <title>Ophicina do Sol</title>
+</head>
+<body>
+    <div id="titulo-imagem">
+        <img src="logo.webp" />
+    </div>
+    <form id="button-form">
+        <button type="button" id="external-link">Conheça nosso site</button>
+        <button type="button" id="local-page">Seja um colaborador</button>
+    </form>
+
+    <script>
+        // Adiciona evento ao botão para abrir o link externo
+        const externalButton = document.getElementById('external-link');
+        externalButton.addEventListener('click', () => {
+            window.open('https://ophicinadosol.com.br/', '_blank'); // Abre em uma nova aba
+        });
+
+        // Adiciona evento ao botão para abrir o index.html local
+        const localButton = document.getElementById('local-page');
+        localButton.addEventListener('click', () => {
+            window.location.href = '../index.html'; // Redireciona para index.html
+        });
+    </script>
+
+<div class="document-footer">
+    <br><br><p1>Desenvolvido por <strong>@renatol123 &copy; 2024</strong></p1>
+    </div>
+
+</body>
+</html>

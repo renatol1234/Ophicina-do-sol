@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+<link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/formulario-d2bcb.appspot.com/o/icon.ico?alt=media&token=0d8a61ca-d40d-4b6d-be8a-9cedcac498a7" type="image/x-icon">
+ 
+    <title>Formulário Técnico - Piscina</title>
+    <link rel="stylesheet" href="psicina.css">
+ 
+    
+    
+    <script src="paginas.js" defer></script>
+    <script src="checkbox.js" defer></script>
+    
+    
+    
+</head>
+<body>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar">
+            <span id="progress-percentage"></span>
+        </div>
+    </div>
+        
+    <div id="titulo-imagem">
+        <img src="logo-site-15-e1717592786468.webp" />
+    </div>
+    <h1>Formulário Técnico - Piscina</h1>
+    
+    <form id="formulario">
+        <div class="step" id="step-1">
+        <h1>Dados do CLiente</h1>
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente">
+
+        <label for="telefone">Telefone / Celular:</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(00)00000-0000">
+
+        
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000">
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco">
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero">
+
+        <label for="cidade-uf">Cidade e UF:</label>
+        <input type="text" id="cidade-uf" name="cidade-uf">
+        
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+        </div>  
+    </div>
+
+    <div class="step" id="step-2">
+        <h2>Características da piscina</h2>
+        <label>Geometria da piscina:</label>
+        <input type="checkbox" name="geometria-psicina" value="regular"> Regular
+        <input type="checkbox" name="geometria-psicina" value="circular"> Circurlar
+        <input type="checkbox" name="geometria-psicina" value="irregular"> Irregular<br><br>
+        <input type="text" id="geometria-psicina-input" name="dimencoes"placeholder="____m x ____m">
+        <input type="text" id="geometria-psicina-input" name="diametro"placeholder="Diâmetro _____" >
+        <input type="text" id="geometria-psicina-input" name="Area"placeholder="Área ____"> <br>
+
+        <label>Características da piscina:</label>
+        <input type="radio" name="caracteristicas-psicina" value="aberta"> Aberta
+        <input type="radio" name="caracteristicas-psicina" value="fechada"> Fechada<br><br>
+
+        <label>Aplicação</label>
+        <input type="checkbox" name="aplicacao" value="clube"> Clube
+        <input type="checkbox" name="aplicacao" value="residencia"> Residência<br>
+        <input type="checkbox" name="aplicacao" value="academia"> Academia
+        <input type="checkbox" name="aplicacao" value="fisioterapia"> Fisioterapia<br>
+        <input type="checkbox" name="aplicacao" value="spa"> Spa
+
+        <!-- Aplicação -->
+    <label>
+        <input type="checkbox" name="aplicacao" value="outros" id="aplicacao-outros"> Outros
+    </label>
+    <input type="text" id="aplicacao-outros-input" name="aplicacao-outros-input" class="hidden" placeholder="Especifique">
+
+
+
+
+        <br><br><label for="temperatura">Temperatura Desejada:</label>
+        <input type="text" id="temperatura" name="temperatura"placeholder="Temperatura °">
+
+        <label for="tempo-utilizacao">Tempo de utilização da piscina:</label>
+        <input type="text" id="tempo-utilizacao" name="tempo-utilizacao"placeholder="____ horas">
+
+        <label for="possui-sistema">Já possui sistema de aquecimento?:</label>
+
+        <!-- Possui Sistema -->
+    <label>
+        <input type="radio" name="possui-sistema" value="sim" id="possui-sistema-sim"> Sim
+    </label>
+    <label>
+        <input type="radio" name="possui-sistema" value="nao" id="possui-sistema-nao"> Não
+    </label>
+
+        <div id="possui-sistema-fields" class="hidden">
+        <input type="text" id="possui-sistema-input-qual" name="possui-sistema-input-qual" placeholder="Qual:____">
+        <input type="text" id="possui-sistema-input-marca" name="possui-sistema-input-marca" placeholder="Marca:____">
+        <input type="text" id="possui-sistema-input-modelo" name="possui-sistema-input-modelo" placeholder="Modelo:____">
+        <input type="text" id="possui-sistema-input-quantidade" name="possui-sistema-input-quantidade" placeholder="Quantidade:____">
+        <input type="text" id="possui-sistema-input-potencia" name="possui-sistema-input-potencia" placeholder="Potência:____">
+    </div>
+
+
+
+        <label for="capa-termica">Irá utilizar capa térmica:</label>
+
+       <!-- Capa Térmica -->
+<label>
+    <input type="radio" name="capa-termica" value="sim" id="capa-termica-sim"> Sim
+</label>
+<label>
+    <input type="radio" name="capa-termica" value="nao" id="capa-termica-nao"> Não
+</label>
+
+<div id="capa-termica-fields" class="hidden">
+    <input type="text" id="capa-termica-sim-input-qual" name="capa-termica-sim-input" placeholder="Qual:____">
+    <br>
+    <label>
+        <input type="checkbox" name="capa-termica" value="plastico-bolha" id="plastico-bolha"> Plástico bolha
+    </label>
+    <label>
+        <input type="checkbox" name="capa-termica" value="lona" id="lona"> Lona
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="capa-termica" value="outros" id="capa-termica-outros"> Outros
+    </label>
+    <input type="text" id="capa-termica-outros-input" name="capa-termica-outros-input" class="hidden" placeholder="Especifique:">
+</div>
+
+    
+     
+
+        <label for="observacao">Observação:</label>
+        <textarea id="observacao" name="observacao"></textarea>
+
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+            <button type="button" class="prev-step">Anterior</button>
+        </div>  
+    </div>
+
+    <div class="step" id="step-3">
+        <h2>Características do local da instalação</h2>
+
+        <label>Dimensões do local de instalação dos coletores:</label>
+        <input type="text" id="local-instalacao" name="local-instalacao"placeholder="_____m x _____m">
+        <label>Inclinação da cobertura:</label>
+        <input type="text" id="inclinacao-cobertura" name="inclinacao-cobertura"placeholder=" _____°">
+
+
+        <label>Necessidade de aprovação quanto à resistência estrutural:</label>
+        <input type="radio" name="aprovacao-resistencia" value="sim"> Sim
+        <input type="radio" name="aprovacao-resistencia" value="nao"> Não<br><br>
+
+        <label>Orientação do local da instalação:</label>
+        <input type="checkbox" name="orientacao-instalacao" value="ng"> NG
+        <input type="checkbox" name="orientacao-instalacao" value="desvio-45"> Desvio 45°<br>
+        <input type="checkbox" name="orientacao-instalacao" value="desvio-90"> Desvio 90°
+
+        <!-- Orientação de Instalação -->
+    <label>
+        <input type="checkbox" name="orientacao-instalacao" value="outros" id="orientacao-outros"> Outros
+    </label>
+    <input type="text" id="orientacao-outros-input" name="orientacao-outros-input" class="hidden" placeholder="Especifique">
+
+        
+
+
+        <br><br>
+        <label>Desnível entre coletores e casa de máquinas:</label>
+        <input type="text" id="dimensoes-local" name="dimensoes-local"placeholder="_____metros">
+
+
+        <label>Distância horizontal entre coletores e casa de máquinas:</label>
+        <input type="text" id="distancia" name="distancia" placeholder="_______metros">
+
+        <label>Filtro:</label>
+          <!-- Filtro -->
+    <label>
+        <input type="radio" name="filtro" value="sim" id="filtro-sim"> Sim
+    </label>
+    <label>
+        <input type="radio" name="filtro" value="nao" id="filtro-nao"> Não
+    </label>
+
+    <div id="filtro-sim-fields" class="hidden">
+        <input type="text" id="fabricante" name="fabricante" placeholder="Fabricante:">
+        <input type="text" id="capacidade" name="capacidade" placeholder="Capacidade: m³h">
+        <input type="text" id="modelo" name="modelo" placeholder="Modelo:">
+        <input type="text" id="quantidade" name="quantidade" placeholder="Quantidade:">
+    </div>
+
+        
+
+
+
+        <br><br>
+        <label>Sombreamento:</label>
+        <input type="radio" name="sombreamento" value="sim"> Sim
+        <input type="radio" name="sombreamento" value="nao"> Não
+        <label for="sombreamento">Período de sombreamento:</label>
+        <input type="text" id="sombreamento" name="sombreamento" placeholder="de ... à ...">
+
+
+        <label>Bomba de filtragem:</label>
+
+        <!-- Bomba Filtragem -->
+    <label>
+        <input type="radio" name="bomba-filtragem" value="sim" id="bomba-filtragem-sim"> Sim
+    </label>
+    <label>
+        <input type="radio" name="bomba-filtragem" value="nao" id="bomba-filtragem-nao"> Não
+    </label>
+
+    <div id="bomba-filtragem-sim-fields" class="hidden">
+        <input type="text" id="bomba-fabricante" name="fabricante" placeholder="Fabricante:">
+        <input type="text" id="bomba-succao" name="succao" placeholder="Sucção: ø">
+        <input type="text" id="bomba-potencia" name="potencia" placeholder="Potencia:">
+        <input type="text" id="bomba-recalque" name="recalque" placeholder="Recalque: ø">
+    </div>
+
+       
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+            <button type="button" class="prev-step">Anterior</button>
+        </div>  
+    </div>
+
+
+    <div class="step" id="step-4">
+        <h2>Alimentação elétrica</h2>
+        <label>Fases:</label>
+        <input type="checkbox" name="fases" value="10"> 10
+        <input type="checkbox" name="fases" value="20"> 20
+        <input type="checkbox" name="fases" value="30"> 30<br><br>
+
+        <label>Tensão:</label>
+        <input type="checkbox" name="tensao" value="110v"> 110v
+        <input type="checkbox" name="tensao" value="220v"> 220v<br>
+        <input type="checkbox" name="tensao" value="50Hz"> 50Hz
+        <input type="checkbox" name="tensao" value="60Hz"> 60Hz<br><br>
+
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+            <button type="button" class="prev-step">Anterior</button>
+        </div>  
+    </div>
+
+
+    <div class="step" id="step-5">
+        <h2>Filtragem</h2>
+        <label>Tempo de filtragem:</label>
+        <input type="text" id="tempo-filtragem" name="filtragem">
+        
+
+        <label>Tipo de instalação:</label>
+        <input type="radio" name="tipo-instalacao" value="nao-existe">Direto na cobertura
+        <input type="radio" name="tipo-instalacao" value="em-construcao">Suporte<br><br>
+
+
+        <label>Tipo de cobertura:</label>
+        <input type="checkbox" name="tipo-cobertura" value="telha-colonial"> Telha Colonial
+        <input type="checkbox" name="tipo-cobertura" value="telha-cimento"> Telha cimento<br>
+        <input type="checkbox" name="tipo-cobertura" value="galvanizada"> Galvanizada
+        <input type="checkbox" name="tipo-cobertura" value="laje"> Laje<br>
+        <input type="checkbox" name="tipo-cobertura" value="amianto"> Fibrocimento
+        <!-- Tipo de Cobertura -->
+    <label>
+        <input type="checkbox" name="tipo-cobertura" value="outros" id="tipo-cobertura-outros"> Outros
+    </label>
+    <input type="text" id="tipo-cobertura-outros-input" name="tipo-cobertura-outros-input" class="hidden" placeholder="Especifique">
+
+
+        
+
+        <label for="observacoes-finais">Observações:</label>
+        <textarea id="observacoes-finais" name="observacoes-finais"></textarea>
+
+
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+            <button type="button" class="prev-step">Anterior</button>
+        </div>  
+    </div>
+
+
+    <div class="step" id="step-6">
+        <h2>Sistema de aquecimento Auxiliar</h2>
+        <label>Equipamento de apoio:</label>
+        <input type="checkbox" name="equipamento-apoio" value="aquecedor-passagem"> Aquecedor de passagem<br>
+        <input type="checkbox" name="equipamento-apoio" value="resistencia-eletrica"> Resistência elétrica<br>
+        <input type="checkbox" name="equipamento-apoio" value="bomba-calor"> Bomba de calor<br>
+        <input type="checkbox" name="equipamento-apoio" value="caldeira"> Caldeira
+         <!-- Equipamento de Apoio -->
+    <label>
+        <input type="checkbox" name="equipamento-apoio" value="outros" id="equipamento-apoio-outros"> Outros
+    </label>
+    <input type="text" id="equipamento-apoio-outros-input" name="equipamento-apoio-outros-input" class="hidden" placeholder="Especifique">
+
+       
+
+        <br><br><label for="potencia">Potência:</label>
+        <input type="text" id="potencia1" name="potencia1">
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="text" id="quantidade1" name="quantidade1">
+
+        <label>Local da instalação:</label>
+        <input type="radio" name="local-instalacao" value="aberto"> Aberto
+        <input type="radio" name="local-instalacao" value="fechado"> Fechado<br><br>
+
+        <label for="dimensoes-local-instalacao">Dimensões do local da instalação:</label>
+        <input type="text" id="dimensoes-local-instalacao" name="dimensoes-local-instalacao" placeholder="_____m x _____m x _____m">
+
+        <label>Combustível:</label>
+        <input type="checkbox" name="combustivel" value="eletricidade">Eletricidade
+        <input type="checkbox" name="combustivel" value="glp">GLP<br>
+        <input type="checkbox" name="combustivel" value="gn">GN
+        <input type="checkbox" name="combustivel" value="diesel">Diesel<br>
+        <input type="checkbox" name="combustivel" value="lenha">Lenha
+        <!-- Combustível -->
+    <label>
+        <input type="checkbox" name="combustivel" value="outros" id="combustivel-outros"> Outros
+    </label>
+    <input type="text" id="combustivel-outros-input" name="combustivel-outros-input" class="hidden" placeholder="Especifique">
+
+        
+        <br><br><label for="valor-tarifa">Valor da tarifa (R$):</label>
+        <input type="text" id="valor-tarifa" name="valor-tarifa" step="0.01">
+
+        <label for="consumo-mensal">Consumo mensal (R$):</label>
+        <input type="text" id="consumo-mensal" name="consumo-mensal" step="0.01">
+
+
+        <div class="nav-buttons">
+            <button type="button" class="next-step">Próximo</button><br><br>
+            <button type="button" class="prev-step">Anterior</button>
+        </div>  
+    </div>
+
+    <div class="step" id="step-7">
+        <h2>Equipamento Piscina</h2>
+        <label for="coletor-modelo">Coletor solar modelo:</label>
+        <input type="text" id="coletor-modelo" name="coletor-modelo">
+
+        <label for="reservatorio-modelo">Reservatório térmico modelo:</label>
+        <input type="text" id="reservatorio-modelo" name="reservatorio-modelo">
+
+        <label for="responsavel-tecnico">Responsável Técnico:</label>
+        <input type="text" id="responsavel-tecnico" name="responsavel-tecnico">
+
+        <label for="responsavel-cliente">Responsável / Cliente:</label>
+        <input type="text" id="responsavel-cliente" name="responsavel-cliente">
+
+      
+
+        <p>Atenção</p>
+        
+        <label for="infromativo">Na Revisão, Anexe um croqui geral da obra indicando o local da instalação, a inclinação do local de instalação dos coletores, a direção norte magnético ou geográfico e se há possibilidade de sombreamento, Se possível adquirir; plantas de cobertura e hidráulica da obra.</label><br>
+        
+               
+        
+       
+
+        <button type="button" class="prev-step">Anterior</button><br><br>
+        
+        <button type="button" id="final-submit">Revisar Formulário</button>
+        
+       </div>
+    </form>
+
+    <script type="module">
+
+ // mascra telefone
+ document.addEventListener('DOMContentLoaded', function() {
+    const telefoneInput = document.getElementById('telefone');
+
+    telefoneInput.addEventListener('input', function() {
+        let value = telefoneInput.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+        if (value.length > 11) value = value.slice(0, 11); // Limita o número de dígitos
+
+        // Aplica a máscara
+        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+        value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+
+        telefoneInput.value = value;
+    });
+});
+
+// Buscar endereço com mascra
+document.addEventListener('DOMContentLoaded', function() {
+    const cepInput = document.getElementById('cep');
+
+    cepInput.addEventListener('input', function() {
+        let valor = cepInput.value;
+        valor = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+        if (valor.length > 5) {
+            valor = valor.slice(0, 5) + '-' + valor.slice(5, 8);
+        }
+
+        cepInput.value = valor;
+
+        const cep = valor.replace(/\D/g, ''); // Remove hífen para buscar o CEP
+
+        if (cep.length === 8) {
+            buscarEndereco(cep);
+        } else if (cep.length === 0) {
+            limparCampos();
+        }
+    });
+
+    function buscarEndereco(cep) {
+        const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Resposta da rede não foi ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (!data.erro) {
+                    const endereco = data.logradouro || '';
+                    const bairro = data.bairro || '';
+                    const cidadeUf = `${data.localidade || ''} - ${data.uf || ''}`;
+
+                    document.getElementById("endereco").value = endereco;
+                    document.getElementById("cidade-uf").value = `${bairro}, ${cidadeUf}`;
+                } else {
+                    alert("CEP não encontrado.");
+                    limparCampos();
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar endereço:', error);
+                alert("Erro ao buscar endereço. Tente novamente.");
+                limparCampos();
+            });
+    }
+
+    function limparCampos() {
+        document.getElementById("endereco").value = '';
+        document.getElementById("cidade-uf").value = '';
+    }
+});
+
+        </script>
+    
+    
+    <script>
+        // salvar dados
+
+
+        document.getElementById('final-submit').addEventListener('click', function() {
+    const form = document.getElementById('formulario');
+    const formObject = {};
+
+    // Converte os dados do formulário para um objeto
+    form.querySelectorAll('input, select, textarea').forEach(input => {
+        if (input.type === 'radio' || input.type === 'checkbox') {
+            if (input.checked) {
+                // Se o campo já existe no objeto, converte para array e adiciona o valor
+                if (formObject[input.name]) {
+                    if (!Array.isArray(formObject[input.name])) {
+                        formObject[input.name] = [formObject[input.name]];
+                    }
+                    formObject[input.name].push(input.value);
+                } else {
+                    formObject[input.name] = input.value;
+                }
+            }
+        } else {
+            formObject[input.name] = input.value;
+        }
+    });
+
+    // Armazena os dados no localStorage
+    localStorage.setItem('formData', JSON.stringify(formObject));
+
+    // Verifica se os dados foram armazenados e redireciona
+    if (localStorage.getItem('formData')) {
+        window.location.href = 'piscina2.html';
+    } else {
+        console.error("Erro ao salvar os dados no localStorage");
+    }
+});
+
+
+
+        </script>
+
+</body>
+
+</html>

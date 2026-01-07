@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+<link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/indica-ophicina.appspot.com/o/icon.ico?alt=media&token=cf7af6bb-0870-491c-95de-387cab5c09a3" type="image/x-icon">
+    <title>Sistemas de Anotações</title>
+    
+    
+</head>
+<body>
+    <div id="titulo-imagem">
+        <img src="logo-site-15-e1717592786468.webp" />
+    </div>
+    <div id="auth">
+        <h1>Sejam Bem Vindos</h1>        
+        <button id="banho">Formulário Banho</button>
+        <button id="psicina">Formulário Piscina</button>
+        <button id="ophicina">Ophicina do Sol</button>
+    </div>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="main.js"></script>
+    <script type="module" src="block.js" defer></script>
+    
+    
+    <script>
+        // Adiciona eventos de clique aos botões
+        document.getElementById("banho").addEventListener("click", function() {
+            window.location.href = "./formulario tecnico banho residencia/banho.html";
+        });
+
+        document.getElementById("psicina").addEventListener("click", function() {
+            window.location.href = "./Formulario tecnico de psicina/psicina.html";
+        });
+
+        document.getElementById("ophicina").addEventListener("click", function() {
+            window.location.href = "https://ophicinadosol.com.br/";
+        });
+    </script>
+
+
+<div class="document-footer">
+    <br><br><p1>Desenvolvido por <strong>@renatol123 &copy; 2024</strong></p1>
+    </div>
+
+    <script src="config.js" defer></script>
+</body>
+</html>

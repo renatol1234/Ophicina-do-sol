@@ -1,0 +1,134 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+
+#auth, #dashboard, #comercial1, #signup-form, #indicated-form, #content, #indication-form, #comercial-form, #indicar-form, #indications-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+select, button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+input {
+    width: 100%;
+    margin: 10px -12px;
+    padding: 10px;
+}
+
+
+h3, h2, h1 {
+   
+    color: #2c57b3;
+    font-family: "Open Sans Hebrew Condensed", Sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    text-align: center;
+}
+
+button {
+    background-color: #ec6608; /* Verde escuro */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px 10px 10px 10px;
+    width: 98%;
+
+
+}
+
+button:hover {
+    background-color: #b95813; /* Verde mais escuro */
+}
+@media (max-width: 600px) {
+    input, select, button {
+        font-size: 16px;
+    }
+}
+
+#titulo-imagem {
+    text-align: center;
+    margin-top: 20px;
+}
+#titulo-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+#user-suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    width: 200px; /* Ajuste a largura conforme necessário */
+}
+
+#user-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#user-suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+ /* Define a animação para mudar a cor */
+ @keyframes changeColor {
+    0% {
+        color: #b95813; /* Vermelho */
+    }
+    33% {
+        color: #00FF00; /* Verde */
+    }
+    66% {
+        color: #0000FF; /* Azul */
+    }
+    80% {
+        color: #FF0000; /* Voltar ao vermelho */
+    }
+}
+
+/* Aplica a animação ao texto */
+p1 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: changeColor 30s infinite; /* 30 segundos para uma repetição infinita */
+    font-size: 10px;
+
+}
+
+.document-footer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    padding: 1px;
+    border-radius: 5px;
+
+}

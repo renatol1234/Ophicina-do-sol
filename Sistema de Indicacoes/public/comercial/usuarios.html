@@ -1,0 +1,35 @@
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="usuarios.js"></script>
+    <script type="module" src="block.js" defer></script>
+</head>
+<body>
+    <div id="dashboard">
+
+    
+
+    
+    <input type="text" id="search-user" placeholder="Buscar usuário pelo nome">
+    <ul id="user-suggestions" style="display: none;"></ul>
+
+    <div id="user-select-container">
+        <select id="user-select">
+            <option value="">Selecione um usuário</option>
+        </select>
+    </div>
+
+    
+    <div id="user-details"></div>
+    <div id="indications-list"></div>
+    <button id="save-indications" style="display:none;">Salvar Alterações</button> <br><!-- Botão Salvar -->
+    <button onclick="window.location.href='comercial.html'">Voltar para Comercial</button>
+</div>
+</body>
+</html>

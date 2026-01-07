@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+<link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/formulario-d2bcb.appspot.com/o/icon.ico?alt=media&token=0d8a61ca-d40d-4b6d-be8a-9cedcac498a7" type="image/x-icon">
+ 
+    <title>Formulário Técnico - Banho Residência</title>
+    <link rel="stylesheet" href="banho2.css">
+      <!-- Biblioteca html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+ 
+    <script src="banho.js" defer></script>
+    
+</head>
+<body>
+    <div id="titulo-imagem">
+        <img src="logo-site-15-e1717592786468.webp" />
+    </div>
+    <h1>Formulário Técnico - Banho Residência</h1>
+    <form id="formulario">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente">
+
+        <label for="telefone">Telefone / Celular:</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(00)00000-0000">
+
+        
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000">
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco">
+
+        <label for="bairro">Número:</label>
+        <input type="text" id="bairro" name="bairro">
+
+        <label for="cidade-uf">Bairro: Cidade e UF:</label>
+        <input type="text" id="cidade-uf" name="cidade-uf">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <h2>Consumo de Água Quente</h2>
+        <label>Pontos de Consumo:</label>
+        <input type="checkbox" name="pontos-consumo" value="ducha"> Ducha
+        <input type="checkbox" name="pontos-consumo" value="ducha-higienica"> Ducha Higienica
+        <input type="checkbox" name="pontos-consumo" value="lavatorio"> Lavatório
+        <input type="checkbox" name="pontos-consumo" value="banheira"> Banheira
+        <input type="checkbox" name="pontos-consumo" value="cozinha"> Cozinha<br>
+        <input type="checkbox" name="pontos-consumo" value="lavanderia"> Lavanderia
+        <input type="checkbox" name="pontos-consumo" value="outros" id="pontos-consumo-outros"> Outros
+        <input type="text" id="pontos-consumo-outros-input" name="pontos-consumo-outros-input" class="hidden" placeholder="Especifique">
+
+        <br><br><label for="num-moradores">Nº de Moradores:</label>
+        <input type="text" id="num-moradores" name="num-moradores">
+
+        <label for="num-banhos">Nº Médio de Banhos por Dia:</label>
+        <input type="text" id="num-banhos" name="num-banhos">
+
+        <label for="volume-banheira">Volume da Banheira (litros):</label>
+        <input type="text" id="volume-banheira" name="volume-banheira">
+
+        <label for="observacao">Observação:</label>
+        <textarea id="observacao" name="observacao"></textarea>
+
+        <h2>Características do local da instalação</h2>
+        <label>Local de instalação dos coletores:</label>
+        <input type="checkbox" name="caracteristicas-consumo" value="telha-colonial"> Telha Colonial
+        <input type="checkbox" name="caracteristicas-consumo" value="telha-cimento"> Telha cimento
+        <input type="checkbox" name="caracteristicas-consumo" value="galvanizada"> Galvanizada
+        <input type="checkbox" name="caracteristicas-consumo" value="laje"> Laje<br>
+        <input type="checkbox" name="caracteristicas-consumo" value="amianto"> Amianto
+        <input type="checkbox" name="caracteristicas-consumo" value="outros" id="caracteristicas-consumo-outros"> Outros
+        <input type="text" id="caracteristicas-consumo-outros-input" name="caracteristicas-consumo-outros-input" class="hidden" placeholder="Especifique">
+
+        <br><br><label for="inclinacao-terreno">Inclinação do local de instalação(°):</label>
+        <input type="text" id="inclinacao-terreno" name="inclinacao-terreno">
+
+    
+
+        <label>Orientação do local da instalação:</label>
+        <input type="checkbox" name="orientacao-instalacao" value="ng"> NG
+        <input type="checkbox" name="orientacao-instalacao" value="desvio-45"> Desvio 45°
+        <input type="checkbox" name="orientacao-instalacao" value="desvio-90"> Desvio 90°
+        <input type="checkbox" name="orientacao-instalacao" value="outros" id="orientacao-outros"> Outros
+        <input type="text" id="orientacao-outros-input" name="orientacao-outros-input" class="hidden" placeholder="Especifique">
+
+        <br><br><label>Circulação:</label>
+        <input type="checkbox" name="circulacao" value="termossifao"> Termossifão
+        <input type="checkbox" name="circulacao" value="bombeada"> Bombeada<br><br>
+
+        <label for="dimensoes-local">Dimensões do local de instalação dos coletores (m X m):</label>
+        <input type="text" id="dimensoes-local" name="dimensoes-local">
+
+        <label>Origem da Água:</label>
+        <input type="checkbox" name="origem-agua" value="rede-publica"> Rede pública
+        <input type="checkbox" name="origem-agua" value="poco-artesiano"> Poço artesiano<br><br>
+
+        <label>Sombreamento:</label>
+        <input type="checkbox" name="sombreamento" value="sim"> Sim
+        <input type="checkbox" name="sombreamento" value="nao"> Não
+
+        <br><br><label for="periodo-sombreamento">Período de sombreamento:</label>
+        <input type="text" id="periodo-sombreamento" name="periodo-sombreamento" placeholder="de ... à ...">
+
+        <label>Necessidade de suporte metálico para coletores:</label>
+        <input type="checkbox" name="suporte-metalico" value="sim"> Sim
+        <input type="checkbox" name="suporte-metalico" value="nao"> Não
+
+        <h2>Alimentação elétrica</h2>
+        <label>Fases:</label>
+        <input type="checkbox" name="fases" value="10"> 10
+        <input type="checkbox" name="fases" value="20"> 20
+        <input type="checkbox" name="fases" value="30"> 30
+
+        <label>Tensão:</label>
+        <input type="checkbox" name="tensao" value="110v"> 110v
+        <input type="checkbox" name="tensao" value="220v"> 220v
+        <input type="checkbox" name="tensao" value="50Hz"> 50Hz
+        <input type="checkbox" name="tensao" value="60Hz"> 60Hz<br><br>
+
+        <label>Circuito hidráulico de água quente:</label>
+        <input type="checkbox" name="circuito-hidraulico" value="nao-existe"> Não existe
+        <input type="checkbox" name="circuito-hidraulico" value="em-construcao"> Em construção
+        <input type="checkbox" name="circuito-hidraulico" value="ja-existe"> Já existe<br><br>
+
+        <label>Alimentação água fria:</label>
+        <input type="checkbox" name="alimentacao-agua-fria" value="gravidade"> Gravidade
+        <input type="checkbox" name="alimentacao-agua-fria" value="pressurizada"> Pressurizada<br><br>
+
+        <label>Exclusiva?</label>
+        <input type="checkbox" name="exclusiva" value="sim"> Sim
+        <input type="checkbox" name="exclusiva" value="nao"> Não<br><br>
+
+        <label>Material da tubulação existente:</label>
+        <input type="checkbox" name="material-tubulacao" value="cobre"> Cobre
+        <input type="checkbox" name="material-tubulacao" value="cpvc"> CPVC
+        <input type="checkbox" name="material-tubulacao" value="pex"> PEX
+        <input type="checkbox" name="material-tubulacao" value="aco"> Aço galvanizado<br><br>
+
+        <label for="altura-caixa">Altura da caixa d'água em relação ao reservatório térmico (mca):</label>
+        <input type="text" id="altura-caixa" name="altura-caixa">
+
+        <label for="observacoes-finais">Observações:</label>
+        <textarea id="observacoes-finais" name="observacoes-finais"></textarea>
+
+        <h2>Sistema de aquecimento Auxiliar</h2>
+        <label>Equipamento de apoio:</label>
+        <input type="checkbox" name="equipamento-apoio" value="aquecedor-passagem"> Aquecedor de passagem
+        <input type="checkbox" name="equipamento-apoio" value="resistencia-eletrica"> Resistência elétrica<br>
+        <input type="checkbox" name="equipamento-apoio" value="caldeira"> Caldeira
+        <input type="checkbox" name="equipamento-apoio" value="bomba-calor"> Bomba de calor
+        <input type="checkbox" name="equipamento-apoio" value="outros" id="equipamento-apoio-outros"> Outros
+        <input type="text" id="equipamento-apoio-outros-input" name="equipamento-apoio-outros-input" class="hidden" placeholder="Especifique">
+
+        <br><br><label for="potencia">Potência:</label>
+        <input type="text" id="potencia" name="potencia">
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="text" id="quantidade" name="quantidade">
+
+        <label>Local da instalação:</label>
+        <input type="checkbox" name="local-instalacao" value="aberto"> Aberto
+        <input type="checkbox" name="local-instalacao" value="fechado"> Fechado<br><br>
+
+        <label for="dimensoes-local-instalacao">Dimensões do local da instalação (__m X __m X __m):</label>
+        <input type="text" id="dimensoes-local-instalacao" name="dimensoes-local-instalacao">
+
+        <label>Combustível:</label>
+        <input type="checkbox" name="combustivel" value="eletricidade"> Eletricidade
+        <input type="checkbox" name="combustivel" value="glp"> GLP
+        <input type="checkbox" name="combustivel" value="gn"> GN
+        <input type="checkbox" name="combustivel" value="diesel"> Diesel
+        <input type="checkbox" name="combustivel" value="lenha"> Lenha
+        <input type="checkbox" name="combustivel" value="outros" id="combustivel-outros"> Outros
+        <input type="text" id="combustivel-outros-input" name="combustivel-outros-input" class="hidden" placeholder="Especifique">
+
+        <br><br><label for="valor-tarifa">Valor da tarifa (R$):</label>
+        <input type="text" id="valor-tarifa" name="valor-tarifa" step="0.01">
+
+        <label for="consumo-mensal">Consumo mensal (R$):</label>
+        <input type="text" id="consumo-mensal" name="consumo-mensal" step="0.01">
+
+        <h2>Equipamento Banho</h2>
+        <label for="coletor-modelo">Coletor solar modelo:</label>
+        <input type="text" id="coletor-modelo" name="coletor-modelo">
+
+        <label for="reservatorio-modelo">Reservatório térmico modelo:</label>
+        <input type="text" id="reservatorio-modelo" name="reservatorio-modelo">
+
+        <label for="responsavel-tecnico">Responsável Técnico:</label>
+        <input type="text" id="responsavel-tecnico" name="responsavel-tecnico">
+
+        <label for="responsavel-cliente">Responsável / Cliente:</label>
+        <input type="text" id="responsavel-cliente" name="responsavel-cliente">
+
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" readonly>
+
+        <p>Atenção</p>
+
+        <label for="infromativo">Anexe um croqui geral da obra indicando o local da instalação, a inclinação do local de instalação dos coletores, a direção norte magnético ou geográfico e se há possibilidade de sombreamento, Se possível adquirir; plantas de cobertura e hidráulica da obra.</label><br>
+        
+        <input type="file" id="upload" accept="image/*" multiple>
+        <div id="image-preview"></div>
+        
+        <button type="button" onclick="submitForm()">Salvar e Enviar</button>
+
+       
+    </form>
+    
+    
+    <script type="module">
+
+
+        const apoioOutros = document.getElementById("equipamento-apoio-outros");
+        const apoioOutrosInput = document.getElementById("equipamento-apoio-outros-input");
+        apoioOutros.addEventListener("change", function() {
+            apoioOutrosInput.classList.toggle("hidden", !this.checked);
+        });
+
+        const combustivelOutros = document.getElementById("combustivel-outros");
+        const combustivelOutrosInput = document.getElementById("combustivel-outros-input");
+        combustivelOutros.addEventListener("change", function() {
+            combustivelOutrosInput.classList.toggle("hidden", !this.checked);
+        });
+
+        const orientacaoOutros = document.getElementById("orientacao-outros");
+        const orientacaoOutrosInput = document.getElementById("orientacao-outros-input");
+        orientacaoOutros.addEventListener("change", function() {
+            orientacaoOutrosInput.classList.toggle("hidden", !this.checked);
+        });
+
+        const pontosConsumoOutros = document.getElementById("pontos-consumo-outros");
+        const pontosConsumoOutrosInput = document.getElementById("pontos-consumo-outros-input");
+        pontosConsumoOutros.addEventListener("change", function() {
+        pontosConsumoOutrosInput.classList.toggle("hidden", !this.checked);
+        });
+
+        const caracteristicasConsumoOutros = document.getElementById("caracteristicas-consumo-outros");
+        const caracteristicasConsumoOutrosInput = document.getElementById("caracteristicas-consumo-outros-input");
+        caracteristicasConsumoOutros.addEventListener("change", function() {
+        caracteristicasConsumoOutrosInput.classList.toggle("hidden", !this.checked);
+        });
+
+
+
+
+         // Buscar endereço com mascra
+         document.addEventListener('DOMContentLoaded', function() {
+    const cepInput = document.getElementById('cep');
+
+    cepInput.addEventListener('input', function() {
+        let valor = cepInput.value;
+        valor = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+        if (valor.length > 5) {
+            valor = valor.slice(0, 5) + '-' + valor.slice(5, 8);
+        }
+
+        cepInput.value = valor;
+
+        const cep = valor.replace(/\D/g, ''); // Remove hífen para buscar o CEP
+
+        if (cep.length === 8) {
+            buscarEndereco(cep);
+        } else if (cep.length === 0) {
+            limparCampos();
+        }
+    });
+
+    function buscarEndereco(cep) {
+        const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    const endereco = data.logradouro;
+                    const bairro = data.bairro;
+                    const cidadeUf = `${bairro}, ${data.localidade} - ${data.uf}`;
+
+                    document.getElementById("endereco").value = endereco;
+                    document.getElementById("cidade-uf").value = cidadeUf;
+                } else {
+                    alert("CEP não encontrado.");
+                    limparCampos();
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar endereço:', error);
+                alert("Erro ao buscar endereço. Tente novamente.");
+                limparCampos();
+            });
+    }
+
+    function limparCampos() {
+        document.getElementById("endereco").value = '';
+        document.getElementById("cidade-uf").value = '';
+    }
+});
+
+
+    
+
+       
+
+    </script>
+
+<script>
+window.addEventListener('load', function() {
+    // Obter os dados do localStorage
+    const formData = JSON.parse(localStorage.getItem('formData'));
+
+    if (formData) {
+        // Preencher os campos do formulário com os dados
+        for (const key in formData) {
+            if (formData.hasOwnProperty(key)) {
+                // Obter todos os inputs com o nome correspondente
+                const inputs = document.querySelectorAll(`[name=${key}]`);
+
+                inputs.forEach(input => {
+                    if (input.type === 'checkbox') {
+                        // Se o valor do checkbox está na lista de valores salvos, marque-o
+                        if (Array.isArray(formData[key])) {
+                            input.checked = formData[key].includes(input.value);
+                        } else {
+                            input.checked = (formData[key] === input.value);
+                        }
+
+                        // Verificar se o checkbox "outros" está marcado para exibir o campo de entrada
+                        if (input.id === 'pontos-consumo-outros' || input.id === 'caracteristicas-consumo-outros' || input.id === 'orientacao-outros' || input.id === 'equipamento-apoio-outros' || input.id === 'combustivel-outros') {
+                            const otherInputId = input.id + '-input';
+                            const otherInput = document.getElementById(otherInputId);
+                            if (input.checked) {
+                                otherInput.classList.remove('hidden');
+                            } else {
+                                otherInput.classList.add('hidden');
+                            }
+                        }
+                    } else if (input.type === 'radio') {
+                        // Se o valor do radio button corresponde ao valor salvo, selecione-o
+                        input.checked = (formData[key] === input.value);
+                    } else {
+                        // Preencher campos de texto e outros tipos de input
+                        input.value = formData[key];
+                    }
+                });
+            }
+        }
+    }
+});
+
+// mascra telefone
+document.addEventListener('DOMContentLoaded', function() {
+    const telefoneInput = document.getElementById('telefone');
+
+    telefoneInput.addEventListener('input', function() {
+        let value = telefoneInput.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+        if (value.length > 11) value = value.slice(0, 11); // Limita o número de dígitos
+
+        // Aplica a máscara
+        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+        value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+
+        telefoneInput.value = value;
+    });
+});
+
+
+    </script>
+
+
+<div class="document-footer">
+    <br><br><p1>Desenvolvido por <strong>@renatol123 &copy; 2024</strong></p1>
+    </div> 
+    <script src="config.js" defer></script>
+</body>
+</html>

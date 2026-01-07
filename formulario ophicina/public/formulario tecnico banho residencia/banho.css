@@ -1,0 +1,254 @@
+body {
+    font-family: 'Google Sans', Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+form {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+h1, h2 {
+
+    color: #2c57b3;
+    font-size: 23px;
+    font-weight: 800;
+    text-align: center;
+
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #202124;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    
+}
+
+
+
+
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #4285f4;
+    outline: none;
+    
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: normal;
+    color: #5f6368;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #ec6608; /* Verde escuro */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border-radius: 10px 10px 10px 10px;
+    width: 98%;
+
+}
+
+button:hover {
+    background-color: #b95813; 
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #image-preview img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .remove-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+  #titulo-imagem {
+    text-align: center;
+    margin-top: 20px;
+}
+#titulo-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+configuralçao por pagina 
+.step {
+    display: none; /* Oculta todas as etapas por padrão */
+    margin: 20px 0;
+}
+
+.step.active {
+    display: block; /* Exibe a etapa ativa */
+}
+
+button {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    input[type="text"], textarea {
+      padding: 8px;
+    }
+}
+
+
+/* Esconde todos os passos por padrão */
+.step {
+    display: none;
+}
+
+/* Exibe o passo ativo */
+.step.active {
+    display: block;
+}
+
+/* Adiciona um pouco de espaçamento e estilo */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+p {
+    color: red;
+    font-size: 23px;
+    font-weight: 800;
+    text-align: center;
+
+  }
+
+
+
+
+
+  .progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #ec6608;
+    transition: width 0.3s;
+    position: relative;
+}
+
+.progress-bar span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 20px; /* Centraliza verticalmente */
+}
+
+.step {
+    display: none;
+    margin-top: 60px;
+}
+
+.step.active {
+    display: block;
+}
+
+.error {
+    border-color: red;
+}

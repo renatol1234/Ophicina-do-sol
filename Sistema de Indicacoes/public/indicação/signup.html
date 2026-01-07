@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Ophicina do Sol - Cadastro</title>
+    <link rel="stylesheet" href="indicar.css">
+    <script type="module" src="signup.js" defer></script>
+    <script type="module" src="block.js" defer></script>
+
+
+    <!--
+    <script type="module" src="block.js" defer></script>-->
+</head>
+<body>
+    <div id="titulo-imagem">
+        <img src="logo.webp" />
+    </div>
+    <div id="signup-form">
+        <h1>Cadastro</h1>
+    
+        <input type="text" id="first-name" placeholder="Nome">
+        <input type="text" id="last-name" placeholder="Sobrenome">
+        <input type="text" id="cpf" placeholder="CPF">
+        <input type="text" id="phone" placeholder="Telefone / Celular">
+        <input type="text" id="pix" placeholder="Chave Pix">
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9">
+        <input type="text" id="address" placeholder="Endereço">
+        <div id="resultado"></div>
+        <input type="password" id="signup-password" placeholder="Digite uma senha com pelo menos seis números ou caracteres.">
+        <span id="password-toggle" class="password-toggle">👁️ Visualizar senha</span>
+        <input type="password" id="signup-password-repeat" placeholder="Repita a Senha">
+        <span id="repeat-password-toggle" class="password-toggle">👁️ Visualizar senha</span><br><br>
+        <div id="password-error" style="color: red; font-weight: 800;"></div>
+        <button id="submit-signup">Cadastrar</button>
+        <button id="back-to-auth">Voltar para Login</button>
+
+       
+    </div>
+
+
+   
+</body>
+</html>

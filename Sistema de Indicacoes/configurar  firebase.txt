@@ -1,0 +1,25 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBpnbHSDF5_XpGcKMBQ1XRCy4Yxatzh6vQ",
+  authDomain: "indica-ophicina.firebaseapp.com",
+  databaseURL: "https://indica-ophicina-default-rtdb.firebaseio.com",
+  projectId: "indica-ophicina",
+  storageBucket: "indica-ophicina.appspot.com",
+  messagingSenderId: "419496512361",
+  appId: "1:419496512361:web:14c9a4a3e8072093f64bf8",
+  measurementId: "G-JEW84WQR9P"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);Enviar</button>
+
+
+firebase deploy

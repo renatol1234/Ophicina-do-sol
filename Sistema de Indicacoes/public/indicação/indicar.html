@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Ophicina do Sol</title>
+    <link rel="stylesheet" href="indicar.css">
+
+
+    <script type="module" src="indicar.js" defer></script>
+    <script type="module" src="block.js" defer></script>
+
+    <!--
+    <script type="module" src="block.js" defer></script>-->
+</head>
+<body>
+    <div id="titulo-imagem">
+        <img src="logo.webp" />
+    </div>
+    <div id="auth">
+        <h1>Faça Login ou cadastre-se para indicar</h1>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button id="login">Entrar</button>
+        <button id="signup">Cadastre-se</button>
+        <button id="google-login">Entrar com Google</button>
+        <button id="back">Voltar</button>
+    </div>
+
+    <div id="content" style="display:none;">
+        <h2>Bem-vindo, <span id="user-name"></span></h2>
+        <button id="indicate-someone">Indicar Alguém</button>
+        <button id="view-indications">Acompanhar Indicações</button>
+        <button id="logout">Sair</button>
+    </div>
+
+    <div id="indication-form" style="display:none;">
+        <h3>Indicar Alguém</h3>
+        <input type="text" id="client-name" placeholder="Nome do Cliente">
+        <input type="tel" id="client-phone" placeholder="Telefone do Cliente" pattern="[0-9]{10,15}" required>
+        <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9">
+        <input type="text" id="client-address" placeholder="Endereço">
+        <div class="result" id="resultado"></div>
+        <input type="email" id="client-email" placeholder="Email do Cliente">
+        <select id="service-type">
+            <option value="">Selecione o Serviço</option>
+            <option value="Aquecedor para Banho">Aquecedor para Banho</option>
+            <option value="Aquecedor solar para Piscina">Aquecedor solar para Piscina</option>
+            <option value="Fotovoltaico">Fotovoltaico</option>
+            <option value="Sistema acoplado">Sistema acoplado</option>
+            <option value="Assitência Técinca">Assitência Técinca</option>
+            <option value="Gás e acessórios">Gás e acessórios</option>
+        </select>
+
+        <select id="service2-type">
+            <option value="">Selecione o Serviço</option>
+            <option value="Aquecedor para Banho">Aquecedor para Banho</option>
+            <option value="Aquecedor solar para Piscina">Aquecedor solar para Piscina</option>
+            <option value="Fotovoltaico">Fotovoltaico</option>
+            <option value="Sistema acoplado">Sistema acoplado</option>
+            <option value="Assitência Técinca">Assitência Técinca</option>
+            <option value="Gás e acessórios">Gás e acessórios</option>
+        </select>
+        <button id="submit-indication">Enviar Indicação</button>
+        <button id="back-to-content">Voltar</button>
+    </div>
+
+    <div id="indications-list" style="display:none;">
+        <h3>Minhas Indicações</h3>
+        <ul id="indications-ul"></ul>
+        <button id="back-to-content-from-indications">Voltar</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById('signup').addEventListener('click', () => {
+            window.location.href = 'signup.html';
+        });
+        </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
+
+
+
+
+
+
+       <div class="document-footer">
+        <br><br><p1>Desenvolvido por <strong>@renatol123 &copy; 2024</strong></p1>
+        </div> 
+</body>
+</html>
+
+

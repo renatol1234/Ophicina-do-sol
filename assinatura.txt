@@ -1,0 +1,60 @@
+ <div class="document-footer">
+        <br><br><p1>Desenvolvido por <strong>@renatol123 &copy; 2024</strong></p1>
+        </div> 
+
+
+ /* Define a animação para mudar a cor */
+ @keyframes changeColor {
+    0% {
+        color: #b95813; /* Vermelho */
+    }
+    33% {
+        color: #00FF00; /* Verde */
+    }
+    66% {
+        color: #0000FF; /* Azul */
+    }
+    80% {
+        color: #FF0000; /* Voltar ao vermelho */
+    }
+}
+
+/* Aplica a animação ao texto */
+p1 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: changeColor 30s infinite; /* 30 segundos para uma repetição infinita */
+    font-size: 10px;
+
+}
+
+.document-footer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    padding: 1px;
+    border-radius: 5px;
+    display: none; /* Oculta o rodapé inicialmente */
+
+}
+.document-footer.visible {
+    display: block; /* Exibe o rodapé quando a classe 'visible' é adicionada */
+}
+
+
+
+
+// script.js
+
+document.addEventListener('scroll', () => {
+    const footer = document.querySelector('.document-footer');
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= documentHeight) {
+        footer.classList.add('visible');
+    } else {
+        footer.classList.remove('visible');
+    }
+});

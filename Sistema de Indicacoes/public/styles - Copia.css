@@ -1,0 +1,64 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+}
+@media (max-width: 600px) {
+    input, select, button {
+        font-size: 16px;
+    }
+}
+
+#titulo-imagem {
+    text-align: center;
+    margin-top: 20px;
+}
+#titulo-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Define a animação para mudar a cor */
+@keyframes changeColor {
+    0% {
+        color: #b95813; /* Vermelho */
+    }
+    33% {
+        color: #00FF00; /* Verde */
+    }
+    66% {
+        color: #0000FF; /* Azul */
+    }
+    80% {
+        color: #FF0000; /* Voltar ao vermelho */
+    }
+}
+
+/* Aplica a animação ao texto */
+p1 {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: changeColor 30s infinite; /* 30 segundos para uma repetição infinita */
+    font-size: 10px;
+
+}
+
+.document-footer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    padding: 1px;
+    border-radius: 5px;
+   
+
+}
